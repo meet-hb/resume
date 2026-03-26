@@ -1,0 +1,4 @@
+[
+    { "id": "1", "name": "React.js", "category": "Frontend", "level": 95 },
+    { "id": "2", "name": "Node.js", "category": "Backend", "level": 90 }
+]
