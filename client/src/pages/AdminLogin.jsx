@@ -10,7 +10,6 @@ const AdminLogin = () => {
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // For this demo, we'll use a hardcoded admin credential. 
@@ -22,7 +21,6 @@ const AdminLogin = () => {
       setError('Invalid username or password');
     }
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-grid p-4">
       <div className="w-full max-w-md glass-morphism p-10 rounded-3xl space-y-8 animate-in fade-in zoom-in duration-500">
@@ -39,7 +37,7 @@ const AdminLogin = () => {
             <label className="text-sm font-medium text-gray-400 ml-1">Username</label>
             <div className="relative">
               <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
-              <input 
+              <input
                 type="text" name="username" required value={credentials.username} onChange={handleChange}
                 className="w-full bg-dark/50 border border-gray-800 rounded-xl pl-12 pr-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 placeholder="admin"
@@ -50,7 +48,7 @@ const AdminLogin = () => {
             <label className="text-sm font-medium text-gray-400 ml-1">Password</label>
             <div className="relative">
               <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
-              <input 
+              <input
                 type="password" name="password" required value={credentials.password} onChange={handleChange}
                 className="w-full bg-dark/50 border border-gray-800 rounded-xl pl-12 pr-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 placeholder="••••••••"
@@ -65,7 +63,7 @@ const AdminLogin = () => {
             </div>
           )}
 
-          <button 
+          <button
             type="submit"
             className="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center space-x-2 hover:bg-secondary transition-all"
           >
