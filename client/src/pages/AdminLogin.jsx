@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, User, LogIn, AlertCircle } from 'lucide-react';
-
 const AdminLogin = () => {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
@@ -31,7 +29,6 @@ const AdminLogin = () => {
           <h1 className="text-3xl font-bold text-white">Admin Access</h1>
           <p className="text-gray-400 mt-2">Enter credentials to manage portfolio</p>
         </div>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-400 ml-1">Username</label>
@@ -55,14 +52,12 @@ const AdminLogin = () => {
               />
             </div>
           </div>
-
           {error && (
             <div className="flex items-center space-x-2 p-3 bg-red-500/10 text-red-500 border border-red-500/20 rounded-xl text-sm italic font-medium">
               <AlertCircle size={18} />
               <p>{error}</p>
             </div>
           )}
-
           <button
             type="submit"
             className="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center space-x-2 hover:bg-secondary transition-all"
@@ -75,5 +70,4 @@ const AdminLogin = () => {
     </div>
   );
 };
-
 export default AdminLogin;
